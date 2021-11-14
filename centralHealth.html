@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image" href="https://img.icons8.com/color/48/000000/heart-health.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/signin/">
+    <title>Central Health</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="centralHealth.css">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+  	<img src="https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg?size=626&ext=jpg" class="backgroundImage">
+
+
+  	<h1 id="heading">Central Health Management System</h1>
+<form id="form" >
+	<p id="message" style="color: red" ></p>
+  <div class="mb-3 divclass " >
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3 divclass">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="login" onclick="clicked()">Login</button>
+
+  <button type="submit" class="btn btn-primary" id="adduser" onclick="addUser()">Add user</button>
+  <button type="submit" class="btn btn-primary" id="logout" onclick="logOut()">Log Out</button>
+  <button type="submit" class="btn btn-primary" id="forgotPassword" onclick="forgetPassword()">Forget Password</button>
+
+  <br>
+  <br>
+  <br>
+
+
+  <a href="hospitalLogin.html">
+    <strong> Login as Hospital</strong>
+  </a>
+
+
+</form> <!-- /container -->
+
+
+<!-- <script type="module"> -->
+
+<!-- </script> -->
+
+
+	
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script type="text/javascript" src="centralHealth.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+  
+document.getElementById("form").addEventListener("submit",(event) => event.preventDefault());
+
+
+</script>
+
+  </body>
+</html>

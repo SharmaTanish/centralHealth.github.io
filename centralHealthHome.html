@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+
+	<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="centralHealth.css">
+    <link rel="icon" type="image" href="https://img.icons8.com/color/48/000000/heart-health.png">
+
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<body>
+		<img src="https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg?size=626&ext=jpg" class="backgroundImage">
+
+
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-info" style="position: sticky; top: 0px">
+  <a class="navbar-brand" href="#">Central Health Management System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link " href="feedBack.html" style=" border: 2px solid black; border-radius: 20px">Feedback Form <span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+
+	<form id="form1" >
+	 <button type="submit" class="btn btn-primary" id="logout" onclick="logOut()">Log Out</button>
+	</form>    
+  </div>
+</nav>
+	
+
+
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Type your Location</label>
+    <br>
+    <input type="text" class="form-control" id="location" placeholder="chandigarh" style="width: 70%;display: inline;">
+    
+    
+  	 <button type="button" class="btn btn-primary" id="searchLoc"  style="display: inline;">Fetch Available Hospitals at your Location</button>
+  	<br>
+
+<ul class="list-group" id="parent">
+<!--   <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li> -->
+</ul>
+
+
+  	 <br>
+  	 <br>
+
+  </div>
+
+  <h2>Patient Details</h2>
+
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Your Name</label>
+    <input type="text" class="form-control" id="p_name">
+    
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Hospital Name out of above fetched in which you want to register</label>
+    <input type="text" class="form-control" id="h_name">
+    
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Phone Number (your appointment and doctor details will be informed on this)</label>
+    <input type="text" class="form-control" id="phone">
+    
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Address</label>
+    <input type="text" class="form-control" id="address">
+    
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter Symptoms you are feeling</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <br>
+     <button type="button" class="btn btn-primary" id="submitSymp" >Submit</button>
+     <br>
+     <br>
+  </div>
+</form>
+
+
+
+
+
+	
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+
+<script type="text/javascript" src="centralHealth.js" ></script>
+<script type="text/javascript">
+	document.getElementById("form1").addEventListener("submit",(event) => event.preventDefault());
+
+</script>
+<!-- <script type="text/javascript " src="hospitalLogin.js" ></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</body>
+</html>

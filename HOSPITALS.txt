@@ -1,0 +1,19 @@
+AS OF NOW IN DATABSE THERE I HAVE INCLUDED ONLY THESE 4 ENTRIES, HERE I'D OF HOSPITAL IS MENTIONED (TAKEN EASY ONE AS OF NOW FOR TESTING) WHICH IS USED FOR LOGIN HOSPITAL!
+(ALSO AS OF NOW WE ALSO NEED TO TAKE CARE OF CASE, THE CHARACTERS SHOULD BE EXCATLY IN UPPER AND LOWER CASE AS MENTIONED BELOW)
+
+1. unique id -> "jp"
+location -> "yamunanagar"
+name -> "JP Hospital"
+
+2. unique id -> "gaba"
+location -> "yamunanagar"
+name -> "Gaba Hospital"
+
+3. unique id -> "pgi"
+location -> "chandigarh"
+name -> "PGI"
+
+4. unique id -> "fortis"
+location -> "chandigarh"
+name -> "Fortis Hospital"
+
