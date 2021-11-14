@@ -38,7 +38,7 @@ firebase.auth().onAuthStateChanged((user) => {
 	}
 	// if(user.a==null){
 	// 	if(location.href=="file:///C:/Users/Lenovo/Desktop/HTML%20Sublime%20f…es%20and%20certificate/cpp/centralHealthHome.html"){
-	// 		location.replace("centralHealth.html");
+	// 		location.replace("index.html");
 	// 	}
 	// }
 	
